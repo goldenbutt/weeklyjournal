@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Chengcheng's Journal</title>
+</head>
+
+<body>
+  <div class="intro">
+  <div class="topic">A GENERATIVE WEB</div>
+  <div class="topic name">CHENGCHENG CUI</div>
+  <div class="topic journal">WEEKLY JOURNAL</div>
+  </div>
+
+
+  <div class="entry">
+  <button class="accordion"><div class="star">✶</div><div class="left">Week 1</div><div class="right">Jan.27</div></button>
+  <div class="panel">
+  <p>Hi I'm Chengcheng and I'm from Beijing, China. I'm a senior at Parsons majoring in Communication Design. Currently I'm stuck in another quarantine in Shanghai due to a small virus outbreak near my hotel. I did a number of coding projects so I'm quite familiar with html/css but not javascript. I wish to learn more javascript stuff and create some more interesting projects in this class. 
+  <br><br>
+  For an interesting link I want to share a graphic design showcase website called <a href="https://www.backcatalogue.co/">BACK Catalogue</a>. I'm sure you will find some interesting works.</p>
+</div>
+
+ <button class="accordion"><div class="star">✶</div><div class="left">Week 2</div><div class="right">Feb.4</div></button>
+ <div class="panel">
+  <p>The video for this week <i>Why Is CSS So Weird?</i> explained many experiences I had with web design. I felt many of the ideas from the video, but I couldn't really put them into words. I think the stage directing analogy was very appropriate as I'm also taking a screenplay class this semester. As a director, all I do is suggest, rather than control. The actors, or the web, has their own interpretations. I think the video will fundamentally change some of my design decisions when it comes to the web. I believe it is best to utilize and accept the dynamic web, rather than trying to control it and make it display exactly what I want with tons of detailed CSS.
+  </p>
+</div>
+
+ <button class="accordion"><div class="star">✶</div><div class="left">Week 3</div><div class="right">Feb.10</div></button>
+ <div class="panel">
+  <p>The reading for this week <i>THE COBWEB Can the Internet be Archived?</i> by Julie Lepore was an interesting read as it discusses how the web fails to preserve the past. The web is an excellent platform for sharing information, however old information is rarely preserved as web can be changed and pages can be re-edited constantly. I've used the wayback machine this one time to look up a deleted article on a design manifesto written back in the 2000s. This reading reminded of me of a quote from the <i>Three Body Problem</i>, "If you want it to last, carve it on a stone." I realized even with all the amazing technologies humans have, we still struggle to preserve information in a forever changing world.
+  </p>
+</div>
+
+<button class="accordion"><div class="star">✶</div><div class="left">Week 4</div><div class="right">Feb.17</div></button>
+ <div class="panel">
+  <p>After reading <i>The internet didn’t kill counterculture—you just won’t find it on Instagram</i> I wonder if the concept of "finsta" is an act of counterculture since it rejects the attention seeking tendency of instagram and shares stories and thoughts with the closest and most trusted friends. I feel it is, in away, a betrayal of the platform. One thing I observed is that the internet has  formed into echo chambers through subscription and AI generated recommendations. I wonder what counter culture means today since the definition has probably shifted in the age of the internet.
+  </p>
+</div>
+
+<button class="accordion bottom"><div class="center">● To be continued ●</div><div class="right"></div></button>
+
+</div>
+
+</div>
+
+<!-- <button class="sun" onclick="mode()" onclick="logo()"><div class="dark">☾</div></button> -->
+
+<input onclick="change()"; type="button" value="☾" id="sun"></input>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+function change(){
+  mode();
+  logo();
+}
+
+function mode(){
+
+  var a = document.getElementsByClassName("accordion");
+  var logo = 
+
+   document.body.classList.toggle("dark-mode");
+    for(let i = 0; i < a.length; i += 1) {
+        a.item(i).classList.toggle("accordion-dark");
+    }
+}
+
+
+function logo() 
+{
+    var elem = document.getElementById("sun");
+    if (elem.value=="☾") elem.value = "☀";
+    else elem.value = "☾";
+}
+
+</script>
+
+</body>
+</html>

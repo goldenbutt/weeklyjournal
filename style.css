@@ -1,0 +1,166 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  margin:0;
+  background-color: #white;
+   transition: 0.5s;
+}
+
+.dark-mode{
+  background-color: #121212;
+  color: white;
+  transition: 0.5s;
+}
+
+.intro{
+  margin:1vw;
+}
+
+.topic{
+  font-family:arial;
+  font-weight: normal;
+  font-size: 3vw;
+  float:left;
+}
+
+.journal{
+  font-family:arial;
+  font-size: 3vw;
+  text-align: center;
+  float:none;
+}
+
+.name{
+  font-family:arial;
+  font-size: 3vw;
+  float:right;
+}
+
+
+
+#sun{
+  position: fixed;
+  background:none;
+  border:none;
+  outline: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom:0;
+  color:orange;
+  font-family:arial;
+  font-size: 15vh;
+
+}
+
+.dark{
+
+
+}
+
+.panel{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion{
+  background-color: white;
+  width:100%;
+  text-align: left;
+  outline: none;
+  font-size:5vh;
+  border-left: none;
+  border-right: none;
+  border-bottom:none;
+  border-color: black;
+  border-width:0.5vh;
+  padding:0.2em;
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+.accordion-dark{
+  background-color: #121212;
+  color:white;
+  width:100%;
+  text-align: left;
+  outline: none;
+  font-size:5vh;
+  transition: 0.5s;
+  transition-timing-function: ease;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-color: white;
+  border-width:0.5vh;
+  padding:0.2em;
+
+}
+
+.bottom{
+border-bottom: solid;
+border-width:0.5vh;
+text-align: center;
+}
+
+.center{
+  text-align: center;
+}
+
+.left{
+  float:left;
+  margin-left:1vh;
+  margin-right:1vh;
+}
+
+.right{
+  float:right;
+  margin-left:1vh;
+  margin-right:1vh;
+}
+
+.star{
+  float:left;
+}
+
+p{
+  font-family:arial;
+  font-size: 4vh;
+  margin:1em;
+  line-height:1.5em;
+}
+
+a:link {
+  color: orange;
+}
+
+a:visited {
+  color: orange;
+}
+
+.active .star{
+animation: rotate 1s linear infinite, colorchange 1s linear 0s infinite;
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+ @keyframes colorchange
+    {
+      0%   {color: cyan;}
+      33%  {color: magenta;}
+      66%  {color: yellow;}
+      100% {color: cyan;}
+   }
+
